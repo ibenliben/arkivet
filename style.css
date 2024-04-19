@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mintgreen: #D1E8E2;
+    --blueish: #91ced5;
+    --deepteal: #16626a;
+    --skyblue: #A9D6E5;
+    --lightgrey: #E2E2E2;
+    --lightgreen:#a1d1ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 130px;
+}
+
+body {
+    background-image: linear-gradient(to top left, white, var(--blueish));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible; 
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+/* ROLL-OUT NAV */
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#circle h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#circle:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#circle:not(:hover) {
+    transition: 0.5s;
+}
+
+nav {
+    background-color: var(--deepteal);
+    color: white;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.lenker {
+    display: flex;
+    gap: 50px;
+}
+
+.rollout {
+    margin-bottom: 50px;
+}
+
+.rollout h1 {
+    font-size: 30px;
+}
+
+/* INNHOLD */
+
+main h1 {
+    color: var(--deepteal);
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .fa-solid {
+    color: var(--deepteal);
+    font-size: 30px;
+    margin: 5px;
+}
+
+.search {
+    background-color: white;
+    border-radius: 50px;
+    width: 500px;
+    margin-bottom: 50px;
+    padding: 5px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* DATABEHANDLING */
+.faktabox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: solid 4px var(--deepteal);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.faktabox p {
+    font-size: 20px;
+}
+
+.faktabox img {
+    width: 340px;
+    border-radius: 50px 50px 0 0;
+}
+
+.fa-key {
+    margin-right: 10px;
+}
+
+article h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--deepteal);
+}
+
+table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 25px 25px 0 0;
+    border-bottom: solid 5px var(--blueish);
+    border-collapse: collapse;
+    max-width: 900px;
+}
+
+tr:nth-of-type(even) {
+    background-color: white;
+}
+
+td:nth-of-type(1) {
+    font-size: 20px;
+    color: var(--deepteal);
+    font-weight: 500;
+}
+
+th, td {
+    padding: 20px 20px;
+}
+
+.tabell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PIONERER */
+.profiler {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.profil img {
+    height: 250px;
+    margin: 10px;
+}
+.profil {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.profil p {
+    font-size: 15px;
+}
+
+.profil:nth-of-type(1) {
+    background-color: var(--blueish);
+}
+
+.profil:nth-of-type(2) {
+    background-color: var(--mintgreen);
+}
+
+.profil:nth-of-type(3) { 
+    background-color: var(--deepteal);
+}
+
+.profil:nth-of-type(4) {
+    background-color: var(--lightgreen);
+}
+
+.profil:nth-of-type(5) {
+    background-color: var(--lightgrey);
+}
+
+.profil:nth-of-type(6) {
+    background-color: var(--skyblue);
+}
+
+.profil h2 {
+    color: var(--deepteal);
+}
+
+.profil:nth-of-type(3) h2,
+.profil:nth-of-type(3) p {
+    color: var(--lightgrey);
+}
+
+.profil:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.profil:not(:hover) {
+    transition: 0.5s;
+}
+
+/* HISTORIE */
+.history .search{
+    margin-top: 55px;
+}
