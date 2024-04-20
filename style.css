@@ -296,12 +296,24 @@ th, td {
     padding: 15px;
     background-color: var(--lightgreen);
     transition: all 0.5s;
+    opacity: 0;
 }
 
 .timeline ul li:nth-child(odd) div {
     left: 45px;
+    transform: translateX(200px);
 }
 
 .timeline ul li:nth-child(even) div {
     left: calc(-400px - 45px + 6px);
+    transform: translateX(-200px);
+}
+
+.timeline ul li.in-view:after {
+    background-color: var(--lightgreen);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    opacity: 1;
 }
