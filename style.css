@@ -12,7 +12,7 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 100%;
+   /* max-width: 100%; */
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
 }
@@ -26,7 +26,7 @@
 .flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     height: 130px;
 }
@@ -84,15 +84,9 @@ nav {
     color: white;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-}
+header {
+    color: var(--deepteal);
 
-.lenker {
-    display: flex;
-    gap: 50px;
 }
 
 .rollout {
@@ -153,10 +147,6 @@ p {
 .faktabox img {
     width: 340px;
     border-radius: 50px 50px 0 0;
-}
-
-.fa-play:hover {
-
 }
 
 .fa-key {
@@ -263,9 +253,6 @@ th, td {
 }
 
 /* HISTORIE - TIDSLINJE */
-.history .search{
-    margin-top: 55px;
-}
 
 .timeline ul {
     padding: 50px 0;
@@ -292,9 +279,29 @@ th, td {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transition: translateX(-50%);
+    transform: translateX(-50%);
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    transition: all(0.5s);
+    transition: all 0.5s;
+    background-color: inherit;
+    z-index: 1;
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    background-color: var(--lightgreen);
+    transition: all 0.5s;
+}
+
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(even) div {
+    left: calc(-400px - 45px + 6px);
 }

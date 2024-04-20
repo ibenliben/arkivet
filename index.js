@@ -3,8 +3,7 @@ const nav = document.getElementById("navbar")
 
 logo.addEventListener("click", () => {
     console.log("logo ble trykket")
-
-    logo.classList.toggle("hide") /* FUNKER IKKE!!? */
+    
     nav.classList.toggle("show")
 }) 
 
