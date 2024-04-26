@@ -23,7 +23,6 @@
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .flex {
     display: flex;
     align-items: center;
@@ -124,10 +123,12 @@ main .fa-solid {
 
 /* DATABEHANDLING */
 .faktabox {
-    display: flex;
-    align-items: center;
-    gap: 20px;
     border-bottom: solid 4px var(--green);
+    padding: 10px 20px;
+}
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("bilder/computing.jpeg");
+    background-position: center;
 }
 
 p {
@@ -137,11 +138,6 @@ p {
 
 .faktabox p {
     font-size: 20px;
-}
-
-.faktabox img {
-    width: 340px;
-    border-radius: 50px 50px 0 0;
 }
 
 .fa-key {
