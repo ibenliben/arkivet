@@ -1,3 +1,4 @@
+/* LOGO */
 const logo = document.getElementById("circle")
 const nav = document.getElementById("navbar")
 
@@ -44,3 +45,22 @@ function callBack() {
 window.onload = callBack
 window.onresize = callBack
 window.onscroll = callBack
+
+
+/* PROFILER */
+const babbage = document.getElementById("babbage")
+const popup_bab = document.getElementById("popup-babbage")
+
+babbage.addEventListener("click", () => {
+    console.log("les mer om Charles Babbage")
+
+    popup_bab.classList.toggle("show")
+}
+)
+
+const close_btn = document.querySelector(".close-btn")
+
+close_btn.addEventListener("click", () => {
+    console.log("x ble trykket")
+    popup_bab.classList.remove("show")
+})

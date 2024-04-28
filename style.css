@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 :root {
 
@@ -23,6 +24,7 @@
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .flex {
     display: flex;
     align-items: center;
@@ -32,7 +34,7 @@
 }
 
 body {
-    background-image: linear-gradient(to top left, white, var(--grey) 140%);
+    background-image: linear-gradient(to top left, white, var(--grey)140%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -56,8 +58,8 @@ body {
 /* ROLL-OUT NAV */
 
 #circle {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     margin: 20px;
     display: flex;
@@ -126,9 +128,10 @@ main .fa-solid {
     border-bottom: solid 4px var(--green);
     padding: 10px 20px;
 }
+
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("bilder/computing.jpeg");
-    background-position: center;
+    background-color: rgb(102, 112, 76, .3);
+    padding: 80px 50px;
 }
 
 p {
@@ -148,6 +151,24 @@ article h3 {
     font-size: 30px;
 }
 
+article div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 200px;
+    align-items: center;
+    justify-items: center;
+}
+
+article div:first-child img {
+    height: 300px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+article p:nth-of-type(2) {
+    grid-column: 1/3;
+}
+
 table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 25px 25px 0 0;
@@ -157,7 +178,7 @@ table {
 }
 
 tr:nth-of-type(even) {
-    background-color: white;
+    background-color: rgb(102, 112, 76, .3);
 }
 
 td:nth-of-type(1) {
@@ -176,43 +197,105 @@ td {
 }
 
 /* PIONERER */
-.profiler {
+span.profil {
+    background-color: rgb(102, 112, 76, 0.8);
+    padding: 4px;
+}
+
+span.profil:hover {
+    background-color: var(--darkgreen);
+    color: var(--platinum);
+    transition: 0.5s;
+}
+
+span.profil:not(:hover) {
+    transition: 0.5s;
+}
+
+.popup-profil {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 250px 30px;
+    grid-template-rows: 30px 50px 1fr 140px;
+    padding: 20px;
+    width: 810px;
+    height: 610px;
+    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 10vh;
+    left: 22vw;
+    background-color: var(--lightgreen);
 }
 
-.profil img {
-    height: 250px;
-    margin: 10px;
+.close-btn {
+    background-color: rgb(102, 112, 76, 0.2);
+    border: none;
+    cursor: pointer;
+    grid-column: 3/4;
+    width: 30px;
+    height: 30px;
 }
 
-.profil {
-    margin: 20px;
+.close-btn i {
+    color: var(--darkgreen);
+    font-size: 28px;
+    margin: 0;
+}
+
+.popup-profil img {
+    grid-column: 2/4;
+    grid-row: 3/5;
+    height: 350px;
+}
+
+.popup-profil h1 {
+    grid-column: 1/4;
+    margin-bottom: 0;
+}
+
+.popup-profil p {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.popup-profil .bokser {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    gap: 50px;
+    justify-self: start;
+}
+
+.popup-profil .box {
+    background-color: rgb(102, 112, 76, 0.5);
     padding: 10px;
-    border-radius: 25px 25px 0 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    border-radius: 20px;
+    width: 140px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.profil p {
-    font-size: 15px;
+#popup-pong {
+    background-color: black;
+    color: white;
 }
 
-.profil:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+#popup-pong h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 40px;
 }
 
-.profil:not(:hover) {
-    transition: 0.5s;
+#popup-pong i {
+    color: white;
+    background-color: black;
 }
 
 /* HISTORIE - TIDSLINJE */
 
 .timeline ul {
     padding: 50px 0;
-    background-color: var(--darkgreen);
+    background-color: rgb(102, 112, 76, .3);
 }
 
 .timeline ul li {
@@ -255,7 +338,13 @@ td {
     background-color: var(--lightgreen);
     transition: all 0.5s;
     opacity: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+/* fiks hover effekt ?
+.timeline ul li div.hover {
+    scale: (1.5);
+} */
 
 .timeline ul li:nth-child(odd) div {
     left: 45px;
@@ -299,8 +388,8 @@ td {
     .timeline ul li div {
         width: calc(100vw - 90px);
     }
+
     .timeline ul li:nth-child(even) div {
-        left: 45px ; 
+        left: 45px;
     }
 }
-
