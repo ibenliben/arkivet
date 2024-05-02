@@ -214,97 +214,6 @@ td {
     align-items: center;
 }
 
-/* PIONERER */
-span.profil {
-    background-color: rgb(102, 112, 76, .3);
-    padding: 4px;
-    cursor: pointer;
-}
-
-span.profil:hover {
-    background-color: var(--green);
-    color: var(--platinum);
-    transition: 0.5s;
-}
-
-span.profil:not(:hover) {
-    transition: 0.5s;
-}
-
-.popup-profil {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 250px 30px;
-    grid-template-rows: 30px 50px 1fr 140px;
-    padding: 20px;
-    width: 810px;
-    height: 610px;
-    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 1;
-    top: 10vh;
-    left: 22vw;
-    background-color: var(--lightgreen);
-}
-
-.close-btn {
-    background-color: rgb(102, 112, 76, 0.2);
-    border: none;
-    cursor: pointer;
-    grid-column: 3/4;
-    width: 30px;
-    height: 30px;
-}
-
-.close-btn i {
-    color: var(--darkgreen);
-    font-size: 28px;
-    margin: 0;
-}
-
-.popup-profil img {
-    grid-column: 2/4;
-    grid-row: 3/5;
-    height: 350px;
-}
-
-.popup-profil h1 {
-    grid-column: 1/4;
-    margin-bottom: 0;
-}
-
-.popup-profil p {
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-
-.popup-profil .bokser {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    display: flex;
-    gap: 50px;
-    justify-self: start;
-}
-
-.popup-profil .box {
-    background-color: rgb(102, 112, 76, 0.5);
-    padding: 10px;
-    border-radius: 20px;
-    width: 140px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-#popup-pong {
-    background-color: black;
-    color: white;
-}
-
-#popup-pong h1 {
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 40px;
-}
-
 
 /* HISTORIE - TIDSLINJE */
 
@@ -377,6 +286,109 @@ span.profil:not(:hover) {
     opacity: 1;
 }
 
+/* POPUP-PROFILER */
+span.profil {
+    background-color: rgb(102, 112, 76, .3);
+    padding: 4px;
+    cursor: pointer;
+}
+
+span.profil:hover {
+    background-color: var(--green);
+    color: var(--platinum);
+    transition: 0.5s;
+}
+
+span.profil:not(:hover) {
+    transition: 0.5s;
+}
+
+.popup-profil {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 250px 30px;
+    grid-template-rows: 30px 50px 1fr 140px;
+    padding: 20px;
+    width: 810px;
+    height: 610px;
+    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 10vh;
+    left: 22vw;
+    background-color: var(--lightgreen);
+}
+
+.close-btn {
+    background-color: rgb(102, 112, 76, 0.2);
+    border: none;
+    cursor: pointer;
+    grid-column: 3/4;
+    width: 30px;
+    height: 30px;
+}
+
+.close-btn i {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+}
+
+.popup-profil img {
+    grid-column: 2/4;
+    grid-row: 3/5;
+    height: 350px;
+}
+
+.popup-profil h1 {
+    grid-column: 1/4;
+    margin-bottom: 0;
+}
+
+.popup-profil p {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.popup-profil .bokser {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    gap: 50px;
+    justify-self: start;
+}
+
+.popup-profil .box {
+    background-color: rgb(102, 112, 76, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    width: 140px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#popup-pong {
+    background-color: black;
+    color: white;
+}
+
+#popup-pong h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#popup-harvard-mark {
+    background-image: url("bilder/harvard_mark_1.jpeg");
+    background-size: 814px;
+}
+
+#popup-eniac {
+    background-image: url("bilder/eniac.gif");
+    background-size: 820px;
+    background-repeat: no-repeat;
+    height: 580px;
+}
 /* TIDSLINJE DIV DESIGN*/
 
 .background-image {
@@ -401,16 +413,59 @@ p.stor {
     font-size: 20px;
 }
 
-#pascal {
+.typewriter {
     background-image: url("bilder/old_paper2.webp");
 }
 
-#pascal p, #pascal time, #pascal span{
+.typewriter p, .typewriter time, .typewriter span{
     font-family: "Special Elite", system-ui;
 }
 
 #jacquard {
     background-image: url("bilder/jacquard.jpeg");
+    padding: 30px;
+}
+
+#jacquard p {
+    background-color: var(--lightgreen);
+    padding: 10px;
+}
+
+#jacquard time {
+    color: var(--darkgreen);
+}
+
+.computer {
+    background-image: url("bilder/computer_screen.jpeg");
+    color: white;
+    padding-left: 50px;
+}
+
+.computer time{
+    font-size: 45px;
+    color: #affc41;
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+.computer span {
+    color: #affc41;
+    background-color: black;
+}
+
+.computer span:hover {
+    background-color: #affc41;
+    color: black;
+}
+
+#pong-div {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url("bilder/pong-background.png");
+    background-position: bottom;
+    color: white;
+}
+
+.mac {
+    background-image: url("bilder/laptop.png");
 }
 
 footer {
