@@ -6,7 +6,7 @@ logo.addEventListener("click", () => {
     console.log("logo ble trykket")
 
     nav.classList.toggle("show")
-}) 
+})
 
 /* ARTIKKEL */
 
@@ -35,8 +35,8 @@ function elementInView(el) {
 }
 
 function callBack() {
-    for(let i = 0; i < items.length; i++) {
-        if(elementInView(items[i])) {
+    for (let i = 0; i < items.length; i++) {
+        if (elementInView(items[i])) {
             items[i].classList.add("in-view")
         }
     }
@@ -48,19 +48,24 @@ window.onscroll = callBack
 
 
 /* PROFILER */
-const babbage = document.getElementById("babbage")
-const popup_bab = document.getElementById("popup-babbage")
 
-babbage.addEventListener("click", () => {
-    console.log("les mer om Charles Babbage")
+const profil_list = document.querySelectorAll(".profil")
 
-    popup_bab.classList.toggle("show")
+for (profil of profil_list) {
+
+    profil.addEventListener("click", (event) => {
+        const id = event.target.id
+
+        document.getElementById("popup-" + id).classList.toggle("show")
+    })
 }
-)
 
-const close_btn = document.querySelector(".close-btn")
+const close_btn_list = document.querySelectorAll(".close-btn")
 
-close_btn.addEventListener("click", () => {
-    console.log("x ble trykket")
-    popup_bab.classList.remove("show")
-})
+for (close_btn of close_btn_list) {
+
+    close_btn.addEventListener("click", (event) => {
+        event.target.parentElement.parentElement.classList.remove("show")
+    })
+}
+

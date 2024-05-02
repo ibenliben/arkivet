@@ -119,21 +119,21 @@
             <section class="timeline">
                 <ul>
                     <li class="in-view">
-                        <div>
-                            <p><time>3000 - 1200 fvt.</time>Tidlige beregningsverktøy som abakus og knuter blir utviklet
+                        <div id="oldtiden" class="background-image">
+                            <p class="stor"><time>3000 - 1200 fvt.</time>Tidlige beregningsverktøy som abakus og knuter blir utviklet
                                 i forskjellige deler av verden som Egypt, Mesopotamia, Kina og Sør-Amerika.</p>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div id="pascal" class="background-image">
                             <p><time>1642</time>Blaise Pascal oppfinner den første mekaniske regnemaskinen, kalt
-                                Pascal's Calculator, som kan utføre grunnleggende matematiske operasjoner som addisjon
+                                <span class="profil" id="pascal">Pascal's Calculator</span>, som kan utføre grunnleggende matematiske operasjoner som addisjon
                                 og
                                 subtraksjon.</p>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div id="jacquard" class="background-image">
                             <p><time>1801</time>Joseph Marie Jacquard utvikler Jacquard-veven, en maskin som bruker
                                 hullkort for å automatisere vevningsprosessen. Dette regnes ofte som en tidlig form for
                                 programmerbar maskinvare.</p>
@@ -243,6 +243,21 @@
 
             <aside class="popup-profil hide" id="popup-turing">
                 <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <h1 class="search"> <i class="fa-solid fa-magnifying-glass"></i>Alan Turing</h1>
+                <img src="bilder/turing.jpeg" alt="Alan Turing" title="Alan Turing">
+                <p> fakta om Alan Turing.</p>
+                <div class="bokser">
+                    <div class="box">
+                        <h4>Født</h4>
+                        <h2>23. juni <br> 1912</h2>
+                        <h5>London, <br> Storbritannia</h5>
+                    </div>
+                    <div class="box">
+                        <h4>Døde</h4>
+                        <h2>7. juni <br> 1954</h2>
+                        <h5>Wilmslow, <br> Storbritannia</h5>
+                    </div>
+                </div>
             </aside>
 
             <aside class="popup-profil hide" id="popup-pong">
@@ -250,17 +265,26 @@
                 <h1>P O N G</h1>
             </aside>
 
+            <aside class="popup-profil hide" id="popup-pascal">
+                <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <h1>Pascal's calculator</h1>
+                <img src="bilder/pascals_calc.jpeg" alt="Pascals kalkulator">
+            </aside>
 
         </div>
     </main>
+
+    <footer>
+        <h1>det digitale arkivet.</h1>
+    </footer>
+
     <script src="index.js"></script>
 
     <!-- 
     TO-DO:
+    - fikse tidslinje - fra gammlet papir(egypt) til grått (en tv boks m/ tekst inni skjerm?) til farger(neon ish?)
     - fikse favicon, den funker ikke... 
-    - kan js gjøres mer generell for profilene?
     - fikse pong
-    - farge på bakgrunnen? linear gradient
     - at logoen gjør en animasjon elrn for oppmersomher, noe som sier "trykk på meg"
 -->
 </body>

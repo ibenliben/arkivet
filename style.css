@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Special+Elite&display=swap');
 
 :root {
 
@@ -34,7 +35,7 @@
 }
 
 body {
-    background-image: linear-gradient(to top left, white, var(--grey)140%);
+    background-image: linear-gradient(to top left, white, rgb(102, 112, 76, .5) 140%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -76,6 +77,8 @@ body {
 #circle:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    outline: solid 2px var(--green);
+    outline-offset: 8px;
 }
 
 #circle:not(:hover) {
@@ -148,6 +151,16 @@ p {
     cursor: pointer;
 }
 
+.fa-play:hover {
+    font-size: 40px;
+    margin-bottom: -5px;
+    transition: 0.4s;
+}
+
+.fa-play:not(:hover) {
+    transition: 0.4s;
+}
+
 .fa-key {
     margin-right: 10px;
 }
@@ -203,13 +216,13 @@ td {
 
 /* PIONERER */
 span.profil {
-    background-color: rgb(102, 112, 76, 0.8);
+    background-color: rgb(102, 112, 76, .3);
     padding: 4px;
     cursor: pointer;
 }
 
 span.profil:hover {
-    background-color: var(--darkgreen);
+    background-color: var(--green);
     color: var(--platinum);
     transition: 0.5s;
 }
@@ -292,10 +305,6 @@ span.profil:not(:hover) {
     font-size: 40px;
 }
 
-#popup-pong i {
-    color: white;
-    background-color: black;
-}
 
 /* HISTORIE - TIDSLINJE */
 
@@ -315,10 +324,9 @@ span.profil:not(:hover) {
 
 .timeline time {
     display: block;
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 5px;
     font-weight: 700;
-    color: var(--darkgreen);
 }
 
 .timeline ul li:after {
@@ -340,17 +348,15 @@ span.profil:not(:hover) {
     bottom: 0;
     width: 400px;
     height: 300px;
-    padding: 15px;
-    background-color: var(--lightgreen);
     transition: all 0.5s;
     opacity: 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
 }
 
-/* fiks hover effekt ?
-.timeline ul li div.hover {
-    scale: (1.5);
-} */
+
+.timeline ul li.in-view div:hover {
+    transform: scale(1.1);
+}
 
 .timeline ul li:nth-child(odd) div {
     left: 45px;
@@ -369,6 +375,52 @@ span.profil:not(:hover) {
 .timeline ul li.in-view div {
     transform: none;
     opacity: 1;
+}
+
+/* TIDSLINJE DIV DESIGN*/
+
+.background-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    padding: 40px;
+}
+
+#oldtiden {
+    background-image: url(bilder/old_paper.png);
+}
+
+#oldtiden time, #oldtiden p {
+    color: rgb(68, 35, 35);
+    font-family: "Bad Script", cursive;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+p.stor {
+    font-size: 20px;
+}
+
+#pascal {
+    background-image: url("bilder/old_paper2.webp");
+}
+
+#pascal p, #pascal time, #pascal span{
+    font-family: "Special Elite", system-ui;
+}
+
+#jacquard {
+    background-image: url("bilder/jacquard.jpeg");
+}
+
+footer {
+    background-color: var(--green);
+    color: white;
+    height: 200px;
+    margin-top: 50px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 900px) {
