@@ -68,4 +68,3 @@ for (close_btn of close_btn_list) {
         event.target.parentElement.parentElement.classList.remove("show")
     })
 }
-
