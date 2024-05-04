@@ -80,7 +80,7 @@ let spill = {
         // endrer canvas farge
         Pong.context.fillStyle = '#ffffff'
 
-        // slutt spil teksr ('GAME OVER' and 'DU VANT')
+        // slutt spil teksr ('DU TAPTE' and 'DU VANT')
         Pong.context.fillText(text,
             Pong.canvas.width / 2,
             Pong.canvas.height / 2 + 15
@@ -202,7 +202,7 @@ let spill = {
         // om ai vant runden
         else if (this.ai.score === rounds[this.round]) {
             this.over = true
-            setTimeout(function () { Pong.sluttSpillMenu('GAME OVER!') }, 1000)
+            setTimeout(function () { Pong.sluttSpillMenu('DU TAPTE!') }, 1000)
         }
     },
 
