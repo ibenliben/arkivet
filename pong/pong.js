@@ -112,7 +112,7 @@ let spill = {
         this.context.fillStyle = '#ffffff'
 
         // tegner tekst
-        this.context.fillText('Trykk på en taste for å begynne',
+        this.context.fillText('trykk på en taste for å begynne',
             this.canvas.width / 2,
             this.canvas.height / 2 + 15
         )

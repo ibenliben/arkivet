@@ -26,3 +26,36 @@ p {
     font-size: 20px;
     margin: 10px;
 }
+
+nav h1 {
+    font-size: 20px;
+}
+
+nav:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    outline: solid 2px var(--green);
+    outline-offset: 8px;
+}
+nav:not(:hover) {
+    transition: 0.5s;
+}
+
+nav {
+    background-color: var(--green);
+    color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+canvas {
+    border: solid 4px white;
+    border-radius: 30px;
+}
