@@ -516,17 +516,6 @@ span.profil:not(:hover) {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-#popup-pong {
-    background-color: black;
-    color: white;
-}
-
-#popup-pong h1 {
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-}
-
 #popup-harvard-mark {
     background-image: url("bilder/harvard_mark_1.jpeg");
     background-size: 814px;
@@ -537,6 +526,23 @@ span.profil:not(:hover) {
     background-size: 820px;
     background-repeat: no-repeat;
     height: 580px;
+}
+
+#pong-link {
+    text-decoration: none;
+    background-color: black;
+    color: #affc41;
+    padding: 5px;
+}
+
+#pong-link:hover {
+    color: black;
+    background-color: #affc41;
+    transition: 0.5s;
+}
+
+#pong-link:not(:hover) {
+    transition: 0.5s;
 }
 
 footer {
