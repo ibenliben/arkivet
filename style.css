@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
 
@@ -318,6 +318,15 @@ p.stor {
     font-family: "Special Elite", system-ui;
 }
 
+.typewriter span {
+    background-color: rgb(102, 112, 76, .3);
+}
+
+.typewriter span:hover {
+    background-color: var(--green);
+    color: var(--platinum);
+}
+
 #kretskort {
     background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("bilder/kretskort.png");
     background-size: 420px;
@@ -349,16 +358,37 @@ p.stor {
     color: var(--darkgreen);
 }
 
+.book {
+    background-image: url("bilder/book.png");
+}
+
+.book span {
+    background-color: rgb(221, 28, 28);
+    color: white;
+}
+
+.book span:hover {
+    background-color: rgb(131, 65, 41);
+    color: white;
+}
+
+.book time {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 40px;
+}
+
 .computer {
     background-image: url("bilder/computer_screen.jpeg");
     color: white;
     padding-left: 50px;
+    padding-top: 30px;
 }
 
 .computer time{
-    font-size: 45px;
     color: #affc41;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "VT323", monospace;
+    font-size: 50px;
     margin-bottom: 0;
 }
 
@@ -380,6 +410,7 @@ p.stor {
 
 .timeline div.apple {
     height: 410px;
+    border-radius: 25px;
 }
 
 .apple time {
@@ -405,19 +436,6 @@ p.stor {
     color: black;
 }
 
-.mac {
-    background-image: url("bilder/laptop.png");
-    background-size: 450px;
-    color: white;
-    padding: 20px;
-}
-
-.mac p {
-    margin-top: 5px;
-    background-color: rgb(0, 0, 0, 0.3);
-    padding: 20px;
-}
-
 div#phone {
     width: 500px;
     left: calc(-500px - 50px + 10px);
@@ -433,18 +451,27 @@ div#phone {
     margin-top: 10px;
 }
 
+#mac {
+    background-image: url("bilder/laptop.png");
+    background-size: 480px;
+    color: white;
+    padding: 15px;
+}
+
+#mac p {
+    background-color: rgb(0, 0, 0, 0.3);
+    padding: 15px;
+}
+
 
 /* POPUP-PROFILER */
 
 span.profil {
-    background-color: rgb(102, 112, 76, .3);
-    padding: 4px;
     cursor: pointer;
+    padding: 4px;
 }
 
 span.profil:hover {
-    background-color: var(--green);
-    color: var(--platinum);
     transition: 0.5s;
 }
 
