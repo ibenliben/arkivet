@@ -7,7 +7,7 @@ let retning = {
 }
 
 let rounds = [5, 5, 3, 3, 2]
-let colors = ['#1abc9c', '#2ecc71', '#3498db', '#8c52ff', '#9b59b6']
+let colors = ['black', 'black', 'black', 'black', 'black']
 
 // ballen
 let ball = {
@@ -58,7 +58,7 @@ let spill = {
         this.running = this.over = false
         this.turn = this.ai
         this.timer = this.round = 0
-        this.color = '#8c52ff'
+        this.color = 'black'
 
         Pong.menu()
         Pong.listen()
@@ -190,7 +190,7 @@ let spill = {
                 setTimeout(function () { Pong.sluttSpillMenu('DU VANT!') }, 1000)
             } else {
                 // dersom det er en til runde 
-                this.color = this._generateRoundColor()
+                this.color = "black"//this._generateRoundColor()
                 this.player.score = this.ai.score = 0
                 this.player.speed += 0.5
                 this.ai.speed += 1
@@ -345,12 +345,12 @@ let spill = {
         return ((new Date()).getTime() - this.timer >= 1000)
     },
 
-    // velger tilfelidig bakgrunnsfarge for runden
+   /*  // velger tilfelidig bakgrunnsfarge for runden
     _generateRoundColor: function () {
         let newColor = colors[Math.floor(Math.random() * colors.length)]
         if (newColor === this.color) return Pong._generateRoundColor()
         return newColor
-    }
+    } */
 }
 
 let Pong = Object.assign({}, spill)
