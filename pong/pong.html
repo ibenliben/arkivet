@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../bilder/favicon.ico"> 
-    <link rel="stylesheet" href="pong.css">
+    <title>arkivet - pong</title>
 
-    <title>arkivet - spill pong</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+            background-image: linear-gradient(to top left, white, rgb(102, 112, 76, .5) 140%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+         #canvas {
+            border: 4px solid #a5ac92;
+        }
+
+        p {
+            font-size: 20px;
+        }
+        
+        h1 {
+            font-size: 40px;
+            color: #4b5239;
+        }
+    </style>
 </head>
 <body>
 
-    <p>Spill</p>
     <h1>PONG</h1>
-    <p>mot AI</p>
-    <canvas></canvas>
-    <p>Styr venstre spiller ved å bruke piltastene</p>
-
+    <canvas id="canvas" width="800" height="600"></canvas>
     <script src="pong.js"></script>
+    <p>Styr venstre spiller med musen</p>
 
 </body>
 </html>
