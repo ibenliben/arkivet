@@ -25,7 +25,7 @@ const ball = {
     x: canvas.width/2,
     y: canvas.height/2,
     radius: 10,
-    speed: 7,
+    speed: 5,
     vX: 5,
     vY: 5,
     color: "white"
@@ -68,7 +68,7 @@ function resetBall() {
     ball.x = canvas.width/2
     ball.y = canvas.height/2
 
-    ball.speed = 7
+    ball.speed = 5
     ball.vX = -ball.vX
 }
 

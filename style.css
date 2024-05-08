@@ -587,6 +587,10 @@ span.profil:not(:hover) {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+#popup-turing img {
+    height: 300px;
+}
+
 #popup-harvard-mark {
     background-image: url("bilder/harvard_mark_1.jpeg");
     background-size: 814px;
@@ -613,6 +617,23 @@ span.profil:not(:hover) {
     grid-column: 1/4;
     grid-row: 4/5;
     padding: 10px;
+}
+
+#popup-pascal {
+    grid-template-columns: 1fr 1fr 30px;
+    grid-template-rows: 30px 50px 200px 1fr;
+}
+
+#popup-pascal img {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    height: 300px;
+    border: solid 4px white;
+}
+
+#popup-pascal p {
+    grid-column: 1/4;
+    padding: 15px;
 }
 
 #pong-link {
