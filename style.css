@@ -169,7 +169,7 @@ article h3 {
     font-size: 30px;
 }
 
-.text{
+.text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 200px;
@@ -303,7 +303,7 @@ tr:nth-child(3) {
     height: 300px;
     transition: all 0.5s;
     opacity: 0;
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 
@@ -343,7 +343,8 @@ tr:nth-child(3) {
     background-image: url("bilder/old_paper.png");
 }
 
-#oldtiden time, #oldtiden p {
+#oldtiden time,
+#oldtiden p {
     color: rgb(68, 35, 35);
     font-family: "Bad Script", cursive;
     font-weight: 900;
@@ -358,7 +359,9 @@ p.stor {
     background-image: url("bilder/old_paper2.webp");
 }
 
-.typewriter p, .typewriter time, .typewriter span{
+.typewriter p,
+.typewriter time,
+.typewriter span {
     font-family: "Special Elite", system-ui;
 }
 
@@ -368,7 +371,7 @@ p.stor {
 
 .typewriter span:hover {
     background-color: var(--green);
-    color: var(--platinum);
+    color: white;
 }
 
 #kretskort {
@@ -429,7 +432,7 @@ p.stor {
     padding-top: 30px;
 }
 
-.computer time{
+.computer time {
     color: #affc41;
     font-family: "VT323", monospace;
     font-size: 50px;
@@ -437,9 +440,9 @@ p.stor {
 }
 
 .apple {
-    background-image:  linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2)), url("bilder/apple1.png");
+    background-image: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2)), url("bilder/apple1.png");
     color: white;
-    padding-left: 50px ;
+    padding-left: 50px;
 }
 
 .apple span {
@@ -491,7 +494,7 @@ div#phone {
     color: white;
 }
 
-#phone p{
+#phone p {
     margin-top: 10px;
 }
 
@@ -610,7 +613,7 @@ span.profil:not(:hover) {
     height: 580px;
     padding: 0;
     align-items: end;
-} 
+}
 
 #popup-macintosh p {
     background-color: white;
@@ -665,20 +668,56 @@ footer {
 
 @media screen and (max-width: 900px) {
 
-    .container {
-        max-width: 380px;
+    .rollout {
+        display: none;
+    }
+
+    #circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #circle h1 {
+        font-size: 10px;
+    }
+
+    .faktabox p {
+        font-size: 18px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .pionerer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pionerprofil {
+        max-width: 400px;
+    }
+
+    table {
+        max-width: 350px;
     }
 
     .timeline ul li div {
-        width: 250px;
+        background-color: var(--lightgreen);
+        background-image: none;
     }
 
-    .timeline ul li:nth-child(even) div {
-        left: calc(-250px - 45px - 6px)
+    .timeline ul li.in-view div {
+        width: 420px;
+        color: black;
+        font-family: "Montserrat", sans-serif;
     }
-}
 
-@media screen and (max-width: 600px) {
     .timeline ul li {
         margin-left: 20px;
     }
@@ -689,5 +728,109 @@ footer {
 
     .timeline ul li:nth-child(even) div {
         left: 45px;
+    }
+
+    #oldtiden, 
+    #jacquard,
+    #kretskort,
+    #pong-div,
+    div#phone,
+    #mac  {
+        background-image: none;
+        border-radius: 0;
+        color: black;
+    }
+
+    #oldtiden p {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+    }
+
+    .typewriter p {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    #jacquard p {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .timeline div.apple {
+        height: 300px;
+        border-radius: 0;
+    }
+
+    div#phone {
+        left: 45px;
+        width: 420px;
+    }
+
+    #phone p {
+        margin: 0;
+    }
+
+    #mac p {
+        background-color: transparent;
+    }
+
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    main.container:nth-of-type(3) {
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .search {
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .reise {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96vw;
+    }
+
+    .text img {
+        margin: 20px 0;
+    }
+
+    aside.popup-profil {
+        display: none;
+    }
+
+    .book span,
+    #kretskort span,
+    .apple span,
+    #pong-link {
+        background-color: rgb(102, 112, 76, .3);
+        color: black;
+    }
+
+    .book span:hover,
+    #kretskort span:hover,
+    .apple span:hover,
+    #pong-link:hover {
+        background-color: var(--green);
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .timeline ul li.in-view div {
+        width: 360px;
+    }
+
+    div#phone {
+        width: 360px;
+        padding-top: 15px;
     }
 }
