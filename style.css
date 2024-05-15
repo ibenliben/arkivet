@@ -784,7 +784,7 @@ footer {
     }
 
     .hero {
-        padding: 40px 10px;
+        padding: 100px 10px 40px 10px;
     }
 
     .search {
@@ -801,6 +801,10 @@ footer {
 
     .text img {
         margin: 20px 0;
+    }
+
+    .fakta h3 {
+        text-align: center;
     }
 
     aside.popup-profil {
